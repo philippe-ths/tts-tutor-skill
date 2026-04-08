@@ -41,10 +41,6 @@ mkdir -p ~/.claude/skills/tts-tutor-skill
 cp path/to/SKILL.md ~/.claude/skills/tts-tutor-skill/SKILL.md
 ```
 
-### API
-
-The skill follows the [Agent Skills](https://agentskills.io) open standard. Include the contents of `SKILL.md` in your system prompt when calling the Anthropic API.
-
 ## Usage
 
 Ask Claude to create a learning guide on any topic. The skill triggers automatically when it detects requests for learning guides, lessons, study material, or TTS-friendly content.
@@ -67,6 +63,22 @@ Teach me about DNS resolution. Focus on official documentation as sources.
 Create a listen-friendly guide on Kubernetes networking for someone who
 already understands Docker networking.
 ```
+
+### Inputs
+
+The skill responds to more than just a topic name. You can control:
+
+- **Topic scope.** Be as broad or specific as you like. "Teach me about DNS" and "Teach me about DNS recursive resolution specifically" produce different guides.
+- **Source preferences.** State what sources you want emphasised, e.g. "focus on official documentation" or "include community and practitioner sources." If you say nothing, the skill favours official documentation but includes community sources where they strengthen the teaching.
+- **Your own materials.** Paste text, upload documents, or provide links. The skill will synthesise from what you provide rather than searching or generating from its own knowledge.
+
+### Research behaviour
+
+The skill checks whether web search is available before writing.
+
+- **Search available.** The skill searches for reputable sources (official docs, engineering blogs, academic papers, recognised publications) and grounds the guide in researched material. Sources are cited at the end.
+- **Search not available.** The skill generates from its own knowledge and adds a disclaimer noting the output has not been cross-referenced with external sources.
+- **Materials provided.** If you provide source material directly, the skill uses it regardless of whether search is available.
 
 ### What to expect
 
