@@ -111,7 +111,7 @@ Each major topic should have four parts:
 
 1. A title.
 2. An introduction that states what the concept is and why it matters.
-3. Content where the real teaching happens. Use whatever teaching techniques best fit the topic.
+3. Content where the real teaching happens. Use whatever teaching techniques best fit the topic. Do not write "Content" as a heading. The teaching material flows directly after the introduction.
 4. A conclusion with a learning takeaway that captures the essential point in one or two sentences.
 
 ## Overall Guide Structure
