@@ -1,5 +1,5 @@
 ---
-name: tts-tutor
+name: tts-tutor-skill
 description: "Generate high-quality learning guides optimised for text-to-speech. Use when asked to create a learning guide, lesson, study material, revision guide, teaching material, TTS-friendly content, listen-friendly guide, or audio-optimised learning material on any topic."
 ---
 
