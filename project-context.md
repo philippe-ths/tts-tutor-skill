@@ -56,7 +56,7 @@ The Agent Skills open standard defines the `SKILL.md` frontmatter and loading co
 
 ## Project Structure
 
-`SKILL.md` is the primary skill instruction file with YAML frontmatter (including the `version` field) and the full pedagogy, formatting, and calibration rules.
+`SKILL.md` is the primary skill instruction file with YAML frontmatter (including a `metadata.version` field) and the full pedagogy, formatting, and calibration rules.
 `README.md` documents what the skill does, install paths for Claude.ai and Claude Code, example prompts, and what to expect from the output.
 `CHANGELOG.md` records skill versions in Common Changelog format and is the canonical source of the current version number alongside the `SKILL.md` frontmatter.
 `LICENSE` is the MIT licence for the skill.

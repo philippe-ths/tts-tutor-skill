@@ -16,6 +16,7 @@ This project follows [Common Changelog](https://common-changelog.org/) and [Sema
 
 - `Symbols and notation in audio` example block split for readability and extended with a numeric-identifier pattern.
 - Existing symbolic-content Quality Check item now lists `identifiers` in its enumeration.
+- Skill version field moved from top-level `version` into `metadata.version` for VS Code Copilot agent compatibility; semantic version unchanged.
 
 ## [1.1.0] - 2026-04-25
 

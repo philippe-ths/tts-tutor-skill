@@ -1,7 +1,8 @@
 ---
 name: tts-tutor-skill
-version: "1.1.1"
 description: "Generate high-quality learning guides optimised for text-to-speech. Use when asked to create a learning guide, lesson, study material, revision guide, teaching material, TTS-friendly content, listen-friendly guide, or audio-optimised learning material on any topic."
+metadata:
+  version: "1.1.1"
 ---
 
 # TTS Tutor
