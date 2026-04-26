@@ -4,6 +4,19 @@ All notable changes to TTS Tutor are documented in this file.
 
 This project follows [Common Changelog](https://common-changelog.org/) and [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-04-26
+
+### Added
+
+- `Numerical results in audio` rule under TTS formatting. Describes the shape and direction of a result rather than reading every decimal aloud; reserves exact decimals for headline numbers; summarises tables instead of reading them.
+- Numeric identifier coverage in `Symbols and notation in audio`. arXiv IDs, DOIs, ISBNs, version strings, and commit SHAs are now explicitly named alongside equations, code, and regex; the example block instructs the model to give author and short title aloud and direct the listener to a written reference for the exact identifier.
+- Quality Check items covering numeric identifiers and numerical-result shape.
+
+### Changed
+
+- `Symbols and notation in audio` example block split for readability and extended with a numeric-identifier pattern.
+- Existing symbolic-content Quality Check item now lists `identifiers` in its enumeration.
+
 ## [1.1.0] - 2026-04-25
 
 ### Added

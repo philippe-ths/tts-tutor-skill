@@ -1,6 +1,6 @@
 ---
 name: tts-tutor-skill
-version: "1.1.0"
+version: "1.1.1"
 description: "Generate high-quality learning guides optimised for text-to-speech. Use when asked to create a learning guide, lesson, study material, revision guide, teaching material, TTS-friendly content, listen-friendly guide, or audio-optimised learning material on any topic."
 ---
 
@@ -127,11 +127,21 @@ Example: instead of reading six model names aloud, say "a mix of frontier models
 
 ### Symbols and notation in audio
 
-Symbolic content does not survive being read aloud. Equations, code, regex, file paths, command-line invocations, URLs, hashes, and chemical formulas all reduce to a stream of disconnected sounds the listener cannot reassemble. Short, well-known notation with a natural spoken form is the exception: a single variable name, a famous formula, a named operator.
+Symbolic content does not survive being read aloud. Equations, code, regex, file paths, command-line invocations, URLs, hashes, arXiv IDs, DOIs, ISBNs, version strings, commit SHAs, and chemical formulas all reduce to a stream of disconnected sounds the listener cannot reassemble. Short, well-known notation with a natural spoken form is the exception: a single variable name, a famous formula, a named operator.
 
 Describe the shape in plain language and point to the source for the exact form. Name the kind of notation, say what it does, and stop.
 
-Example: instead of reading an equation, say "as your budget goes up you can keep more paths. As your task length goes up, you keep fewer. The paper publishes a table you can copy." For code, describe what the function does and point to the example file. For a regex, describe the pattern in words.
+Example: instead of reading an equation, say "as your budget goes up you can keep more paths. As your task length goes up, you keep fewer. The paper publishes a table you can copy."
+
+For code, describe what the function does and point to the example file. For regex, describe the pattern in words. For numeric identifiers like arXiv IDs and DOIs, give the author and short paper title aloud and direct the listener to a written reference for the exact identifier.
+
+### Numerical results in audio
+
+Long decimal numbers read as a stream of disconnected digits the listener cannot reassemble. "Eighty one point one three to eighty six point seven nine" is unrecoverable in audio. By the time the listener has parsed the digits, the next sentence is already gone.
+
+Lead with the shape: the direction, the rough magnitude, and how big a change it represents. Reserve exact decimals for the one or two headline numbers per topic that the listener should actually remember, like a critical p value or a single key accuracy figure.
+
+Round supporting numbers to the nearest meaningful tier or describe the magnitude. Example: instead of "rose from eighty one point one three to eighty six point seven nine," say "rose by about five points." For tables of benchmark results, summarise the pattern (uniform improvement, mixed wins and losses, one outlier) rather than reading the table.
 
 ## Teaching Methodology
 
@@ -195,7 +205,9 @@ Before finishing, check that the output:
 - Opens with stakes a non-builder can feel, not a vivid example that requires shared technical context.
 - Establishes the problem each topic exists to solve before describing what was tested or built.
 - Collapses or groups proper nouns when the names themselves are decoration rather than teaching, and keeps them when the listener will use the specific name later.
-- Describes symbolic content (equations, code, regex, paths, commands, URLs, hashes) in plain language and points to the source for the exact form.
+- Describes symbolic content (equations, code, regex, paths, commands, URLs, hashes, identifiers) in plain language and points to the source for the exact form.
+- Numeric identifiers (arXiv IDs, DOIs, hashes, version strings, commit SHAs) are not voiced; the listener is given author and short title and pointed to a written reference.
+- Leads numerical results with shape and direction rather than reading every decimal aloud, reserving exact decimals only for one or two headline numbers per topic.
 - Does not voice internal evaluation shorthand or rubric language in any reader-facing brief.
 - Tutor-style questions appear when calibration says they are on, and are absent when off.
 - Includes learning takeaways for each major topic.
