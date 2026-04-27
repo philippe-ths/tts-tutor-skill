@@ -1,10 +1,12 @@
+# Ai workflow 
+.agents/
 .ai-policy/
 .claude/
+.codex/
+.gemini/
 .githooks/
-workflow/
+.github/
+.vscode/
 ai-workflow.md
 CLAUDE.md
-project-spec-template.md
-project-spec.md
 tts-tutor-skill-spec.md
-Session learning guide prompt.txt
